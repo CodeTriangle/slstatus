@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <locale.h>
 #include <X11/Xlib.h>
 
 #include "arg.h"
@@ -53,6 +54,8 @@ main(int argc, char *argv[])
 	int sflag, ret;
 	char status[MAXLEN];
 	const char *res;
+
+        setlocale(LC_ALL, "");
 
 	sflag = 0;
 	ARGBEGIN {
